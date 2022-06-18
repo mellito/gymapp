@@ -2,7 +2,7 @@ import React from "react";
 import "./app.css";
 import { Route, Routes } from "react-router-dom";
 import { Box } from "@mui/material";
-import { Home } from "@mui/icons-material";
+import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ExerciseDetails from "./pages/ExerciseDetails";
 import Footer from "./components/Footer";
@@ -15,7 +15,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetails />} />
       </Routes>
-
       <Footer />
     </Box>
   );
