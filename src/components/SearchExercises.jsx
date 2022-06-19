@@ -26,15 +26,14 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         exercisesOptions,
       );
 
-      const searchExercise = exerciseData.data.filter((exercise) => {
-        return (
-          exercise.name.toLowerCase().includes(search) ||
-          exercise.type.toLowerCase().includes(search) ||
-          exercise.target.toLowerCase().includes(search) ||
-          exercise.equipment.toLowerCase().includes(search)
-        );
-      });
-      setExercises(searchExercise);
+      const searchedExercises = exerciseData.filter(
+        (item) =>
+          item.name.toLowerCase().includes(search) ||
+          item.target.toLowerCase().includes(search) ||
+          item.equipment.toLowerCase().includes(search) ||
+          item.bodyPart.toLowerCase().includes(search),
+      );
+      setExercises(searchedExercises);
       setSearch("");
     }
   };
