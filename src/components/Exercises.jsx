@@ -13,7 +13,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     indefexOfFirstExercise,
     indexOfLastExercise,
   );
-  console.log(Math.ceil(exercises.length / exercisesPerPage));
+
   const paginate = (e, value) => {
     setcurrentPage(value);
     window.scrollTo({ top: 1800, behavior: "smooth" });
