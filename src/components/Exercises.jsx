@@ -13,7 +13,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     indefexOfFirstExercise,
     indexOfLastExercise,
   );
-  console.log(Math.ceil(exercises.length / exercisesPerPage));
+
   const paginate = (e, value) => {
     setcurrentPage(value);
     window.scrollTo({ top: 1800, behavior: "smooth" });
@@ -41,7 +41,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
   return (
     <Box id="exercises" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
-      <Typography variant="h3" mb="46px">
+      <Typography variant="h3" mb="46px" textAlign="center">
         Showing Results
       </Typography>
       <Stack
